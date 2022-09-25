@@ -16,7 +16,7 @@ class AssertJAssertionsTest {
         //given
         String name = "Jan";
         String lastName = "Kowalski";
-        final Person person = Person.create(name, lastName);
+        final Person person = Person.create(name, lastName, 31);
 
         //when
         String actual = person.getFullName();
@@ -68,7 +68,7 @@ class AssertJAssertionsTest {
         //given
         String name = "Jan";
         String lastName = "Kowalski";
-        final Person person = Person.create(name, lastName);
+        final Person person = Person.create(name, lastName, 31);
 
         //when
         String actual = person.getFullName();
@@ -76,6 +76,24 @@ class AssertJAssertionsTest {
         //then
         assertThat(actual)
                 .doesNotContainAnyWhitespaces();
+    }
+
+    @Test
+    void shouldReturnFullNameWithAge() {
+        //given
+        String name = "Ed";
+        String lastName = "Sheeran";
+        int age = 31;
+        Person person = Person.create(name, lastName, age);
+
+        //when
+        String nameWithAge = person.getFullNameWithAge();
+
+        //then
+        assertThat(nameWithAge)
+                .startsWith(name)
+                .endsWith("31")
+                .contains(lastName);
     }
 
 }
