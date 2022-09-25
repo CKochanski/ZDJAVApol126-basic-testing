@@ -27,7 +27,7 @@ class AssertionsTest {
     void shouldBeTrue() {
         boolean value = true;
 
-        assertTrue(value, "value shoule be true");
+        assertTrue(value, "value should be true");
     }
 
     @Test

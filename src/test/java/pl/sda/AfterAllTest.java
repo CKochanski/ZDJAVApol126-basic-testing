@@ -10,6 +10,7 @@ class AfterAllTest {
         System.out.println("Ten komunikat wyświetli się raz po wykonaniu wszystkich metod testujących");
     }
 
+
     @Test
     void firstTest() {
         System.out.println("Wykonuję test pierwszy...");

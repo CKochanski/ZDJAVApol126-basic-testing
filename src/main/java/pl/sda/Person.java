@@ -10,12 +10,20 @@ public class Person {
         this.lastName = lastName;
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
     public static Person create(String firstName, String lastName) {
         return new Person(firstName, lastName);
     }
 
     public String getFullName() {
-        return lastName + " " + firstName;
+        return firstName + " " + lastName;
     }
 
 }
